@@ -1,3 +1,39 @@
 html {
-    background: plum;
+    background: whitesmoke;
+}
+.right-photo {
+    float: right;
+    margin-left: 20px;
+    margin-top: -100px;   /* moves it up */
+    width: 45vw;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.main-title {
+    font-size: 4rem;       /* bigger than default h1 */
+    font-weight: bold;
+    text-align: center;    /* center it */
+    margin-top: 50px;
+}
+.button-row {
+    display: flex;
+    justify-content: center; /* centriranje po širini */
+    gap: 20px;               /* razmak između dugmadi */
+    margin-top: 30px;
+}
+
+.my-button {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.my-button:hover {
+    background-color: #45a049;
 }
