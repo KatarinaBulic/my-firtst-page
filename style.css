@@ -7,11 +7,11 @@ body {
 }
 
 .elliptic-header {
-  width: 100%;
+  width: 80%;
   height: 64px; /* 20% shorter than 80px */
   background: linear-gradient(to right, #1e3c72, #2a5298);
   border-radius: 32px; /* keep ellipse shape proportional */
-  margin: 20px 0;
+  margin: 20px auto;
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   display: flex;
   align-items: center;
@@ -79,8 +79,9 @@ body {
 .main-title {
   font-size: 4rem;
   font-weight: bold;
-  text-align: center;
-  margin-top: 50px;
+  text-align: left;
+  margin-top: 100px;
+  margin-left: 150px;   /* adjust this value as needed */
 }
 
 /* Buttons row */
