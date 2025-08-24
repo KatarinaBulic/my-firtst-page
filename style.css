@@ -8,23 +8,22 @@ body {
 
 .elliptic-header {
   width: 80%;
-  height: 64px; /* 20% shorter than 80px */
+  height: 64px;
   background: linear-gradient(to right, #1e3c72, #2a5298);
-  border-radius: 32px; /* keep ellipse shape proportional */
+  border-radius: 32px;
   margin: 20px auto;
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* menu stays on right */
+  justify-content: flex-end;
   padding: 0 60px;
 }   
-/* Menu container */
+
 .menu {
   display: flex;
   align-items: center;
 }
 
-/* Menu links */
 .menu a {
   color: white;
   text-decoration: none;
@@ -34,12 +33,10 @@ body {
   transition: color 0.3s ease;
 }
 
-/* Hover text color */
 .menu a:hover {
   color: #00e6ff;
 }
 
-/* Underline effect */
 .menu a::after {
   content: '';
   position: absolute;
@@ -54,37 +51,64 @@ body {
   transform: translateX(-50%);
 }
 
-/* Animate underline on hover */
-.menu a:hover::after {
-  width: 100%;
-}
-
-/* Keep underline on active link */
+.menu a:hover::after,
 .menu a.active::after {
   width: 100%;
 }
 
-/* Profile photo */
 .right-photo {
   float: right;
   margin-left: 20px;
-  margin-top: -100px;
+  margin-top: 50px;
   width: 45vw;
   height: auto;
   border-radius: 50%;
   object-fit: cover;
 }
 
-/* Title */
-.main-title {
-  font-size: 4rem;
-  font-weight: bold;
-  text-align: left;
-  margin-top: 100px;
-  margin-left: 150px;   /* adjust this value as needed */
+/* Welcome text */
+.welcome-text {
+  font-size: 9rem;
+  font-family: 'Great Vibes', cursive;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  top: 10%;
+  left: 50px;
+  line-height: 1.1;
 }
 
-/* Buttons row */
+.welcome-text .subtext {
+  display: block;
+  font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  margin-top: 10px;
+  color: #dfe6f3;
+}
+
+/* Typing effect */
+.typing-text {
+  display: inline-block; /* shrink to fit text */
+  margin-top: 10px;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #ffccff;
+}
+
+.typing-text::after {
+  content: "|"; /* blinking cursor */
+  animation: blink 0.7s infinite;
+  margin-left: 2px;
+  color: #ffccff;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
 .button-row {
   display: flex;
   justify-content: center;
@@ -93,7 +117,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* Elliptical buttons */
 .ellipse-button {
   display: inline-block;
   padding: 12px 36px;
@@ -110,7 +133,6 @@ body {
   background-color: #732d91;
 }
 
-/* Mobile view */
 @media (max-width: 600px) {
   .button-row {
     flex-direction: column;
